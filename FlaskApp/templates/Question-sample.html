@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Automatic Answer Checker</title>
+    <script>
+        function showAlert() {
+            alert("Response noted! Submit another Response!");
+        }
+    </script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body bgcolor="#afafaf">
+<form class="form-signin" action="{{ url_for("foo") }}" method="post">
+    <div class="container">
+
+        <div class="form-group">
+            <div class="row justify-content-center">
+                <h1 style="text-align: center; font-weight: bold;">Automatic Answer Checker</h1>
+            </div>
+        </div>
+        <hr>
+
+        <div class="form-group">
+        <div class="row">
+        <br>
+        <h6 class="h3 mb-3 font-weight-normal col-sm-2">Question1 :</h6>
+        <br>
+        <h3 class="h3 mb-3 font-weight-normal col-sm-6">What is Encapsulation? Give Example.</h3>
+        <br>
+        <textarea class="form-control form-control-sm"name="first"placeholder="Your Answer" rows="5" cols="100" id ="q1" title="Answer"></textarea><!--name=id -->
+        <br>
+        </div>
+        </div>
+        
+        <div class="form-group">
+        <div class="row">
+        <br>
+        <h6 class="h3 mb-3 font-weight-normal col-sm-2">Question2 :</h6>
+        <br>
+        <h3 class="h3 mb-3 font-weight-normal col-sm-8">Define Asymptotic Notation and list its types.</h3>
+        <br>
+        <textarea class="form-control form-control-sm" name="second" placeholder="Your Answer" rows="5" cols="100" id="q2" title="Answer"></textarea>
+        <br>
+        </div>
+        </div>
+
+        <div class="form-group">
+        <div class="row">
+        <br>
+        <h6 class="h3 mb-3 font-weight-normal col-sm-2" style="font-weight: bold;">Question3 :</h6>
+        <br>
+        <h3 class="h3 mb-3 font-weight-normal col-sm-8">What is Polymorphism ? List its Types.</h3>
+        <br>
+        <textarea class="form-control form-control-sm" name="third" placeholder="Your Answer" rows="5" cols="100" id ="q3" title="Answer"></textarea>
+        <br>
+        </div>
+        </div>
+
+        <br>
+        <div class="form-group">
+        <div class="" style="text-align: center;">
+        <div class="col">
+        
+        <input type="email" style="border-style: solid;" placeholder="Email ID*" name="emailID">
+        </div>
+        </div>
+        </div>
+        <div class="form-group">
+        <div class="" style="text-align: center;">
+        <div class="col">
+        <input type="submit" value="Submit" class="btn btn-primary" onclick="showAlert()">
+        </div>
+        </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
